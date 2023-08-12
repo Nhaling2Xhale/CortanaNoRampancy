@@ -1,0 +1,36 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+#startButton, #stopButton {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#startButton:hover, #stopButton:hover {
+    background-color: #005999;
+}
+
+#optionsForm {
+    margin: 20px 0;
+}
+
+#optionsForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#optionsForm input[type="text"], #optionsForm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

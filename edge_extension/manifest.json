@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Cortana Edge Extension",
+  "version": "1.0",
+  "description": "A Microsoft Edge extension that mimics the functionality of the deprecated Cortana Windows 11 application.",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "images/icon48.png",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
